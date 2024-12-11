@@ -1,0 +1,189 @@
+body {
+  background-color: #121212;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Navbar Styling */
+nav {
+  
+  width: 100%;
+  background-color: #333;
+  padding: 10px 0;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* Active Link */
+nav a.active {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
+/* Page Container Styles */
+.container {
+  background-color: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin-top: 10px; /* Account for fixed navbar */
+}
+
+/* Heading Styles */
+h1 {
+  color: #ffcc00;
+  font-size: 24px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Button Styling */
+button {
+  background-color: #ffcc00;
+  color: #121212;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-left: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff9900;
+}
+
+/* Textarea Styling */
+textarea {
+  background-color: #333;
+  color: #fff;
+  padding: 12px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  width: 90%;
+  margin-top: 10px;
+  font-size: 16px;
+  resize: vertical;
+  min-height: 100px;
+}
+
+textarea:focus {
+  border-color: #ffcc00;
+  outline: none;
+}
+
+/* File Input Styling */
+input[type="file"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  width: 90%;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+input[type="file"]:focus {
+  border-color: #ffcc00;
+  outline: none;
+}
+
+/* Decoded Text Display */
+p {
+  font-size: 16px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+span {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+/* Image Preview Styling */
+img {
+  max-width: 100%; /* Ensure the image does not overflow */
+  height: auto;
+  max-height: 300px; /* Control the height of the image preview */
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  input[type="file"] {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  img {
+    max-width: 100%; /* Keep the image size responsive */
+    height: auto;
+    max-height: 250px; /* Limit preview height for small screens */
+  }
+}
