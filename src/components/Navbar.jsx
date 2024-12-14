@@ -1,32 +1,20 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
-  const [active, setActive] = useState("/encode");
-
-  const handleClick = (page) => {
-    setActive(page);
-  };
+  const location = useLocation();
 
   return (
     <div className="container">
       <nav>
         <ul>
           <li>
-            <Link
-              to="/encode"
-              className={active === "/encode" ? "active" : ""}
-              onClick={() => handleClick("/encode")}
-            >
+            <Link to="/encode" className={location.pathname === "/encode" ? "active" : ""}>
               Encode
             </Link>
           </li>
           <li>
-            <Link
-              to="/decode"
-              className={active === "/decode" ? "active" : ""}
-              onClick={() => handleClick("/decode")}
-            >
+            <Link to="/decode" className={location.pathname === "/decode" ? "active" : ""}>
               Decode
             </Link>
           </li>
